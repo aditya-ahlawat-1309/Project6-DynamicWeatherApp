@@ -1,38 +1,207 @@
-.App {
-  text-align: center;
+* {
+  padding: 0;
+  margin: 0;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  background: #f3f2ef;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 100vh;
+  width: 100vw;
 }
 
-.App-link {
-  color: #61dafb;
+html,
+body {
+  font-size: 62.5%;
+  height: 100%;
 }
 
-@keyframes App-logo-spin {
+html {
+  background: #eee;
+}
+
+.box {
+  width: 20vw;
+  height: 60vh;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.2rem 3rem rgba(0, 0, 0, 0.2);
+  background: #a5bbdd;
+  position: relative;
+  overflow: hidden;
+  transform: translate3d(0, 0, 0);
+  min-width: 20rem;
+  min-height: 35rem;
+}
+
+.wave {
+  opacity: 0.3;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  background: white;
+  width: 50rem;
+  height: 50rem;
+  margin-left: -25rem;
+  margin-top: -25rem;
+  transform-origin: 50% 48%;
+  border-radius: 43%;
+  animation: drift 3000ms infinite linear;
+  z-index: 1;
+}
+
+.wave-three {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  background: white;
+  width: 50rem;
+  height: 50rem;
+  margin-left: -25rem;
+  margin-top: -25rem;
+  transform-origin: 50% 48%;
+  border-radius: 43%;
+  animation: drift 5000ms infinite linear;
+  z-index: 2 !important;
+  opacity: 0.2;
+}
+
+.wave-two {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  background: white;
+  width: 50rem;
+  height: 50rem;
+  margin-left: -25rem;
+  margin-top: -25rem;
+  transform-origin: 50% 48%;
+  border-radius: 43%;
+  animation: drift 7000ms infinite linear;
+  z-index: 3 !important;
+  opacity: 0.1;
+}
+
+.box:after {
+  content: " ";
+  display: block;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 11;
+  transform: translate3d(0, 0, 0);
+}
+
+@keyframes drift {
   from {
     transform: rotate(0deg);
   }
-  to {
+
+  from {
     transform: rotate(360deg);
   }
+}
+
+.info {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 45%;
+  z-index: 4;
+}
+
+.location {
+  margin-top: -10rem;
+  text-align: center;
+  font-weight: 800;
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+.fa-street-view {
+  animation: rotate 3s linear infinite alternate;
+}
+
+@keyframes rotates {
+  from {
+    transform: translateX(-0.5rem);
+  }
+
+  to {
+    transform: translateX(0.5rem);
+  }
+}
+
+#date {
+  text-align: center;
+  margin-top: 0.5rem;
+  color: #57606f;
+  font-size: 1.2rem;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.temp {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 3rem;
+}
+
+.tempmin_max {
+  text-align: center;
+  margin-top: 0.5rem;
+  font-weight: 300;
+  font-size: 1.2rem;
+  color: #57606f;
+}
+
+#weathercon {
+  height: 55%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3em;
+}
+
+#weathercon .fas {
+  font-size: 6rem;
+  animation: fas-anime 3s linear infinite alternate;
+}
+
+@keyframes fas-anime {
+  from {
+    transform: scale(0.8);
+  }
+
+  to {
+    transform: scale(1.7);
+  }
+}
+
+@media (max-width: 1200px) {
+  .box {
+    width: 90vw;
+    height: 80vh;
+  }
+}
+
+@media (max-height:500px) {
+  .box {
+    height: 80vh;
+
+  }
+
+  .wave {
+    top: 115%;
+  }
+}
+
+body>span {
+  width: 100vw;
+  text-align: center;
+  color: grey;
 }
