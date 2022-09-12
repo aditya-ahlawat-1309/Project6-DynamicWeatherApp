@@ -5,13 +5,17 @@
 }
 
 body {
-  background: #f3f2ef;
+
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   height: 100vh;
   width: 100vw;
+    background-image: url("https://images.pexels.com/photos/414491/pexels-photo-414491.jpeg?cs=srgb&dl=pexels-pixabay-414491.jpg&fm=jpg");
+  background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 html,
@@ -25,11 +29,11 @@ html {
 }
 
 .box {
-  width: 20vw;
+  width: 50vw;
   height: 60vh;
-  border-radius: 0.5rem;
-  box-shadow: 0 0.2rem 3rem rgba(0, 0, 0, 0.2);
-  background: #a5bbdd;
+  border-radius: 1rem;
+  /* box-shadow: 0rem 0rem 25rem 5rem rgb(255, 255, 255); */
+  /* background: #a5bbdd; */
   position: relative;
   overflow: hidden;
   transform: translate3d(0, 0, 0);
@@ -40,12 +44,12 @@ html {
 .wave {
   opacity: 0.3;
   position: absolute;
-  top: 100%;
+  top: 70%;
   left: 50%;
-  background: white;
-  width: 50rem;
+  background: black;
+  width: 70rem;
   height: 50rem;
-  margin-left: -25rem;
+  margin-left: -35rem;
   margin-top: -25rem;
   transform-origin: 50% 48%;
   border-radius: 43%;
@@ -55,12 +59,12 @@ html {
 
 .wave-three {
   position: absolute;
-  top: 100%;
+  top: 70%;
   left: 50%;
-  background: white;
-  width: 50rem;
+  background: black;
+  width: 70rem;
   height: 50rem;
-  margin-left: -25rem;
+  margin-left: -35rem;
   margin-top: -25rem;
   transform-origin: 50% 48%;
   border-radius: 43%;
@@ -71,9 +75,9 @@ html {
 
 .wave-two {
   position: absolute;
-  top: 100%;
+  top: 70%;
   left: 50%;
-  background: white;
+  background: black;
   width: 50rem;
   height: 50rem;
   margin-left: -25rem;
@@ -149,6 +153,7 @@ html {
   margin-top: 2rem;
   text-align: center;
   font-size: 3rem;
+  color:white;
 }
 
 .tempmin_max {
@@ -156,7 +161,7 @@ html {
   margin-top: 0.5rem;
   font-weight: 300;
   font-size: 1.2rem;
-  color: #57606f;
+  color: white;
 }
 
 #weathercon {
@@ -203,5 +208,5 @@ html {
 body>span {
   width: 100vw;
   text-align: center;
-  color: grey;
+  color: white;
 }

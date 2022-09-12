@@ -35,25 +35,28 @@ const apiKey = "d7c904567594098688aa1466bfa5cf68";
             <i className="fas fa-street-view" style={{ color: "#fff" }}></i>
 
             <form>
-              <h6>City Name </h6>
+              <h3 style={{color:"white"}}>CITY NAME</h3>
               <input
                 type="text"
                 name="cityName"
+                placeholder="&nbsp;&nbsp;&nbsp;Enter the City Name here"
                 onChange={(e) => setSearch(e.target.value)}
                 style={{
                   backgroundColor: "white",
-                  height: "25px",
-                  width: "200px",
+                  height: "45px",
+                  width: "300px",
                   borderRadius: "25px",
                   borderColor: "white",
-                  textTransform:"uppercase",
-
+                  opacity: "0.5",
+                  border: "none",
+                  fontSize:"2rem",
+                
                 }}
               />
             </form>
           </h3>
           {!city ? (
-            <h1 className='temp'>No Data Found</h1>
+            <h1 className="temp">No Data Found</h1>
           ) : (
             <div>
               <h1 className="temp">{search.toLocaleUpperCase()}</h1>
